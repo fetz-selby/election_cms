@@ -1,0 +1,164 @@
+<!doctype html>
+<!-- The DOCTYPE declaration above will set the     -->
+<!-- browser's rendering engine into                -->
+<!-- "Standards Mode". Replacing this declaration   -->
+<!-- with a "Quirks Mode" doctype is not supported. -->
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="application-name" content="Orphange Application" />
+
+    <!--                                                               -->
+    <!-- Consider inlining CSS to reduce the number of requested files -->
+    <!--                                                               -->
+    <link type="text/css" rel="stylesheet" href="MEInput.css">
+    <link href="css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="css/supr-theme/jquery.ui.supr.css" rel="stylesheet" type="text/css"/>
+    <link href="css/icons.css" rel="stylesheet" type="text/css" />
+    <link href="plugins/uniform/uniform.default.css" type="text/css" rel="stylesheet" />
+    
+    <link href="css/main.css" rel="stylesheet" type="text/css" /> 
+    
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/apple-touch-icon-144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-57-precomposed.png" />
+
+    <!--                                           -->
+    <!-- Any title is fine                         -->
+    <!--                                           -->
+    <title>Election Cradle | Admin</title>
+    
+    <!--                                           -->
+    <!-- This script loads your compiled module.   -->
+    <!-- If you add any GWT meta tags, they must   -->
+    <!-- be added before this line.                -->
+    <!--                                           -->
+    <script type="text/javascript" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>  
+    <script type="text/javascript" src="plugins/touch-punch/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="plugins/ios-fix/ios-orientationchange-fix.js"></script>
+    <script type="text/javascript" src="plugins/validate/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="plugins/uniform/jquery.uniform.min.js"></script>
+
+     <script type="text/javascript">
+        // document ready function
+        $(document).ready(function() {
+            $("input, textarea, select").not('.nostyle').uniform();
+            $("#loginForm").validate({
+                rules: {
+                    username: {
+                        required: true,
+                        minlength: 4
+                    },
+                    password: {
+                        required: true,
+                        minlength: 6
+                    }  
+                },
+                messages: {
+                    username: {
+                        required: "Username is required",
+                        minlength: "My name is bigger"
+                    },
+                    password: {
+                        required: "Please provide a password",
+                        minlength: "My password is more that 6 chars"
+                    }
+                }   
+            });
+        });
+    </script>
+	<script type="text/javascript" language="javascript" src="meinput/meinput.nocache.js"></script>
+  </head>
+
+  <!--                                           -->
+  <!-- The body can have arbitrary html, or      -->
+  <!-- you can leave the body empty if you want  -->
+  <!-- to create a completely dynamic UI.        -->
+  <!--                                           -->
+  <body>
+
+    <!-- OPTIONAL: include this if you want history support -->
+    <iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1' style="position:absolute;width:0;height:0;border:0"></iframe>
+    
+    <!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
+    <noscript>
+      <div style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+        Your web browser must have JavaScript enabled
+        in order for this application to display correctly.
+      </div>
+    </noscript>
+ <input type="hidden" value="login" id="pageId" >
+ <div class="container-fluid">
+
+        <div id="header">
+
+            <div class="row-fluid">
+
+                <div class="navbar">
+                    <div class="navbar-inner">
+                      <div class="container">
+                            <a class="brand" href="javascript:void(0)">ElectionCradle.<span class="slogan">admin</span></a>
+                      </div>
+                    </div><!-- /navbar-inner -->
+                  </div><!-- /navbar -->
+                
+
+            </div><!-- End .row-fluid -->
+
+        </div><!-- End #header -->
+
+    </div><!-- End .container-fluid -->    
+
+    <div class="container-fluid">
+
+        <div class="loginContainer">
+            <form class="form-horizontal" action="javascript:void(0)" id="loginForm" >
+                <div class="form-row row-fluid">
+                    <div class="span12">
+                        <div class="row-fluid">
+                            <label class="form-label span12" for="username">
+                                Username:
+                                <span class="icon16 icomoon-icon-user-2 right gray marginR10"></span>
+                            </label>
+                            <input class="span12" id="username" type="text" name="username" placeholder="email@cradlelabs.com" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row row-fluid">
+                    <div class="span12">
+                        <div class="row-fluid">
+                            <label class="form-label span12" for="password">
+                                Password:
+                                <span class="icon16 icomoon-icon-locked right gray marginR10"></span>
+                           </label>
+                            <input class="span12" id="password" type="password" name="password" value="somepass" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row row-fluid">                       
+                    <div class="span12">
+                        <div class="row-fluid">
+                            <div class="form-actions">
+                            <div class="span12 controls">
+                               <button type="submit" class="btn btn-info right" id="loginBtn"><span class="icon16 icomoon-icon-enter white"></span> Login</button>
+                            </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+
+            </form>
+        </div>
+		<div style="float:right;color: black;margin-top: 70px;">
+			<div style="float:left;padding:3px;background:red;color:#FFFFFF;font-weight:bold;" id="days_left">0</div>&nbsp;<div style="float:left;padding:3px 5px;color:#6b6b6b;">days left.</div>
+		</div>
+    </div><!-- End .container-fluid -->
+  </body>
+</html>

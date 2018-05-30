@@ -1,0 +1,32 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.clearfix{clear: both; height: 0;}
+		.main{width: 320px; padding: 2px;}
+		.main .title{float: left; width: 97%; padding: 5px; background: blue; color: #FFFFFF;}
+		.main .container-content{float: left; padding: 5px;}
+		.main .container-content .content{float: left; padding-top: 20px; padding-bottom: 5px;}
+		.main .container-content .override{float: left; padding-top: 3px; padding-bottom: 5px;}
+		.main .footer{float: right; padding: 5px;}
+		.main .footer .btn{float: left; width: 70px; cursor: pointer; padding: 8px; margin-left: 5px;}
+		.main .footer .anchor{float: left; cursor: pointer;}
+	</ui:style>
+	<g:HTMLPanel styleName="{style.main}">
+	    <div class="{style.title}">
+	        Warning!
+	    </div>
+	    <div class="{style.clearfix}"></div>
+	    
+	    <div class="{style.container-content}">
+	        <div class="{style.content}" ui:field="contentMsg"></div>
+	        <div class="{style.clearfix}"></div>
+	       	<div class="{style.override}" ui:field="overrideMsg"></div>
+	    </div>
+	    <div class="{style.clearfix}"></div>
+	    <div class="{style.footer}">
+	        <g:Button styleName="{style.btn}" ui:field="btn"></g:Button>
+	        <g:Button styleName="{style.btn}" ui:field="cancelLink"></g:Button>
+	    </div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

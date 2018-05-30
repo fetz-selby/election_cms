@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5"
+         xmlns="http://java.sun.com/xml/ns/javaee">
+
+  <!-- Servlets -->
+  <servlet>
+    <servlet-name>greetServlet</servlet-name>
+    <servlet-class>com.admin.media.election.server.GreetingServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>greetServlet</servlet-name>
+    <url-pattern>/meinput/greet</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+    <servlet-name>exchangeServlet</servlet-name>
+    <servlet-class>com.admin.media.election.server.CommServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>exchangeServlet</servlet-name>
+    <url-pattern>/meinput/exchange</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>uploadServlet</servlet-name>
+    <servlet-class>com.admin.media.election.server.CandidateUploadServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>uploadServlet</servlet-name>
+    <url-pattern>/meinput/uploadcandidate</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>partyServlet</servlet-name>
+    <servlet-class>com.admin.media.election.server.PartyUploadServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>partyServlet</servlet-name>
+    <url-pattern>/meinput/uploadparty</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>previewServlet</servlet-name>
+    <servlet-class>com.admin.media.election.server.ImagePreviewServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>previewServlet</servlet-name>
+    <url-pattern>/meinput/preview</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+		<servlet-name>controlServlet</servlet-name>
+		<servlet-class>com.admin.media.election.server.utils.ParamController</servlet-class>
+
+		<init-param>
+			<param-name>users</param-name>
+			<param-value>4</param-value>
+		</init-param>
+
+		<init-param>
+			<param-name>tabs</param-name>
+			<param-value>8</param-value>
+		</init-param>
+
+		<init-param>
+			<param-name>dbname</param-name>
+			<param-value>election2</param-value>
+		</init-param>
+
+		<init-param>
+			<param-name>dbpassword</param-name>
+			<param-value></param-value>
+		</init-param>
+
+		<init-param>
+			<param-name>dbuser</param-name>
+			<param-value>root</param-value>
+		</init-param>
+
+		<init-param>
+			<param-name>dbport</param-name>
+			<param-value>3306</param-value>
+		</init-param>
+
+		<init-param>
+			<param-name>dbip</param-name>
+			<param-value>127.0.0.1</param-value>
+		</init-param>
+
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+  
+  
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  
+  
+  
+  
+  
+  
+  
+   
+  
+
+</web-app>

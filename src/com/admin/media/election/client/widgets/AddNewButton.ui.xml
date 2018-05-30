@@ -1,0 +1,58 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.main{
+			font-family: Arial,Tahoma,Verdana;
+    		font-size: 11px;
+    		line-height: 15px;
+			float: right;
+		}
+		
+		.main .label-style{
+			margin-left: 4px;
+			background-color: #EEEEEE;
+    		background-image: url("images/bg_button.png");
+    		background-repeat: repeat;
+    		border-color: #999999 #999999 #999999 #CC6600;
+    		border-style: solid;
+    		border-width: 1px 1px 1px 2px;
+    		box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    		cursor: pointer;
+    		display: inline-block;
+    		font-family: "Lucida Grande",Tahoma,Verdana,Arial,sans-serif;
+    		font-size: 11px;
+    		font-weight: bold;
+    		line-height: normal !important;
+    		padding: 3px 6px;
+    		text-align: center;
+    		text-decoration: none;
+    		vertical-align: top;
+    		white-space: nowrap;
+    		line-height: 15px;
+    		
+		}
+		
+		.main .label-style .btn-style{
+			font-family: Arial,Tahoma,Verdana;
+    		font-size: 11px;
+    		line-height: 15px;
+    		border-style: solid;
+   			cursor: pointer;
+    		font-family: "Lucida Grande",Tahoma,Verdana,Arial,sans-serif;
+    		font-size: 11px;
+    		font-weight: bold;
+    		line-height: normal !important;
+    		text-align: center;
+    		text-decoration: none;
+    		white-space: nowrap;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<div class="{style.main}" ui:field="btnElement">
+			<label class="{style.label-style}">
+				<div class="style.btn-style">+ Add New</div>
+			</label>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

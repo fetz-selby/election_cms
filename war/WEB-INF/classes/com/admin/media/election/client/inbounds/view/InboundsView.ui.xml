@@ -1,0 +1,251 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:a="urn:import:com.admin.media.election.client.widgets">
+	<ui:style>
+		.wrapper {
+			width: 100%;
+			padding-right: 10px;
+			padding-left: 10px;
+			padding-top: 20px;
+		}
+		
+		.wrapper .filter{
+			padding-top: 20px;
+			padding-bottom: 10px;
+		}
+
+		.wrapper .info{
+			float: right;
+			padding-top: 20px;
+			padding-bottom: 10px;
+		}
+
+		.wrapper .info .info-sub{
+			display: none;
+		}
+
+		.wrapper .info .info-sub .label{
+			float: left;
+			padding-left: 10px;
+			color: #828282;
+		}
+
+		.wrapper .info .info-sub .approve-display{
+			float: left;
+			color: green;
+			padding-left: 5px;
+		}
+		
+		.wrapper .info .info-sub .reject-display{
+			float: left;
+			color: #C6000D;
+			padding-left: 5px;
+		}
+
+		.wrapper .info .info-sub .pending-display{
+			float: left;
+			color: #06c;
+			padding-left: 5px;
+		}
+
+		.wrapper .filter .container{
+			float: left;
+			padding-left: 10px;
+			padding-bottom: 20px;
+		}
+		
+		.wrapper .filter .container .label{
+			float: left;
+			font-size: 14px;
+		}
+		
+		.wrapper .filter .container .year-widget{
+			width: 150px;
+			height: 29px;
+			color: #828282;
+		}
+		
+		.wrapper .filter .container .cons-widget{
+			width: auto;
+			height: auto;
+			min-height: 29px;
+			width: 230px; 
+		}
+		
+		.wrapper .filter .container .search-btn{
+			margin-left: 247px;
+			width: 300px;
+			height: 30px;
+			color: #828282;
+		}
+		
+		.wrapper .search-style{
+			width: 99%;
+			height: 35px;
+			float: right;
+			padding-right: 10px;
+		}
+		
+		.wrapper .page-header {
+			width: 100%;
+			height: 30px;
+			background-color: #E1E1E1;
+			border-left: solid 1px #CCCCCC;
+			border-right: solid 1px #CCCCCC;
+		}
+		
+		.wrapper .page-header>div {
+			font-weight: bold;
+			padding-top: 6px;
+		}
+		
+		.wrapper .name-column {
+			float: left;
+			width: 80px;
+			padding-right: 5px;
+			padding-left: 8px;
+		}
+		
+		.wrapper .time-column {
+			float: left;
+			width: 100px;
+			padding-right: 5px;
+		}
+
+		.wrapper .type-column{
+			float: left;
+			width: 100px;
+			padding-right: 5px;
+		}
+
+		.wrapper .approve-column{
+			float: left;
+			width: 55px;
+			padding-right: 5px;
+		}
+		
+		.wrapper .message-column {
+			float: left;
+			width: 120px;
+			padding-right: 5px;
+		}
+		
+		.wrapper .poll-column{
+			float: left;
+			width: 110px;
+			padding-right: 5px;
+		}
+		
+		.wrapper .mobile-column{
+			float: left;
+			width: 100px;
+			padding-right: 5px;
+		}
+		
+		.wrapper .action-column {
+			float: left;
+			width: 40px;
+		}
+		
+		.wrapper .page-row {
+			width: 100%;
+			border-bottom: solid 1px #CCCCCC;
+			border-left: solid 1px #CCCCCC;
+			border-right: solid 1px #CCCCCC;
+		}
+		
+		.wrapper .page-row .page-row-top {
+			height: 20px;
+			padding-top: 5px;
+		}
+		
+		.clearfix {
+			clear: both;
+		}
+		
+		.wrapper .page-row .popdown-holder {
+			width: 100%;
+		}
+		
+		.actions-column a,.actions-column a:hover,.actions-column a:active,.actions-column a:visited
+			{
+			color: #0066CC;
+		}
+		
+		.grayed {
+			color: #999999;
+		}
+		
+		.wrapper .add-measure-button {
+			float: right;
+		}
+		
+		.wrapper .add-measure-box {
+			margin-bottom: 80px;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+	<div class="{style.wrapper}">
+			<g:SimplePanel styleName="{style.search-style}" ui:field="searchField"/>
+			
+			<div class="{style.filter}">
+				<div class="{style.container}">
+					<label class="{style.label}">Year</label>
+					<div class="{style.clearfix}"></div>
+					<g:ListBox styleName="{style.year-widget}" ui:field="yearListBox"></g:ListBox>
+				</div>
+	
+				<div class="{style.clearfix}"></div>
+
+				<div class="{style.container}">
+					<label class="{style.label}">Constituency</label>
+					<div class="{style.clearfix}"></div>
+					<g:SimplePanel styleName="{style.cons-widget}" ui:field="consSearchBox" />
+				</div>
+				
+				<div class="{style.clearfix}"></div>
+				
+				<div class="{style.container}">
+					<label class="{style.label}">Polling Station</label>
+					<div class="{style.clearfix}"></div>
+					<g:SimplePanel styleName="{style.cons-widget}" ui:field="pollsSearchBox" />
+				</div>
+				
+			</div>
+			
+			<div class="{style.filter}">
+				<div class="{style.container}">
+					<g:Button styleName="{style.search-btn}" ui:field="searchButton" text="Search"/>
+				</div>
+			</div>
+			
+			<div class="{style.clearfix}"></div>
+			
+			<div class="{style.info}">
+			    <div class="{style.info-sub}" ui:field="infoRow">
+			    	<div class="{style.label}" >Approved :</div>
+					<div class="{style.approve-display}" ui:field="aRowCounterDiv"></div>
+				
+					<div class="{style.label}" >Rejected :</div>
+					<div class="{style.reject-display}" ui:field="rRowCounterDiv"></div>
+				
+					<div class="{style.label}" >Pending :</div>
+					<div class="{style.pending-display}" ui:field="pRowCounterDiv"></div>
+				</div>
+			</div>
+			<div class="{style.clearfix}"></div>
+			
+			<div ui:field="div5" class="{style.page-header}">
+				<div class="{style.name-column}">Sender</div>
+				<div class="{style.mobile-column}">Mobile</div>
+				<div class="{style.type-column}">Type</div>
+				<div class="{style.message-column}">Message</div>
+				<div class="{style.time-column}">Time</div>
+				<div class="{style.poll-column}">Polling Station</div>
+ 				<div class="{style.approve-column}">Approve</div>
+ 				<div class="{style.action-column}">&nbsp;</div>
+			</div>
+				<a:TinyScrollPanel ui:field="detailsPanel"/>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

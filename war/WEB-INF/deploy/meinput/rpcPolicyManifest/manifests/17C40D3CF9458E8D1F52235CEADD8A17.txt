@@ -1,0 +1,2 @@
+serviceClass: com.admin.media.election.client.CommService
+path: 649CAC058AF040723DD5459CCA1EB0A1.gwt.rpc

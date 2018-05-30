@@ -1,0 +1,61 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.main{
+			width: 385px;
+			padding: 20px;
+		}
+		
+		.main .message-area{
+			width: inherit;
+			height: 40px;
+			padding: 10px;
+			text-align: center;
+			color: #828282;
+		}
+		
+		.main .option{
+			padding: 10px;
+			height: 30px;
+		}
+		
+		.main .option .action-area{
+			float: left;
+			width: 30%;
+			padding-left: 10px;
+			height: 19px;
+		}
+		
+		.main .option .action-area .action-btn{
+			width: 120px;
+			color: #828282;
+		}
+		
+		.clearfix{
+			height: 0px;
+			clear: both;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<div class="{style.main}">
+			<div class="{style.message-area}">
+				<label>Are you sure you want to continue this action?</label>
+			</div>
+			
+			<div class="{style.clearfix}"></div>
+			
+			<div class="{style.option}">
+				<div class="{style.action-area}">
+					<g:Button styleName="{style.action-btn}" text="Yes" ui:field="yesBtn" />
+				</div>
+				
+				<div class="{style.action-area}"></div>
+				
+				<div class="{style.action-area}">
+					<g:Button styleName="{style.action-btn}" text="No" ui:field="noBtn" />
+				</div>
+			</div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

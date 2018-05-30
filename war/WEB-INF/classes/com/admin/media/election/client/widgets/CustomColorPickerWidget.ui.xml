@@ -1,0 +1,31 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.clearfix{
+			height: 0px;
+			clear: both;
+		}
+		.main{
+			width: auto;
+			height: auto;
+			padding: 3px;
+		}
+		.color-style{
+			padding-bottom: 3px;
+		}
+		.option-style{
+			float: right;
+			width: 120px;
+			height: 19px;
+			color: #828282;
+			margin: 3px;
+		}
+	</ui:style>
+	<g:HTMLPanel styleName="{style.main}">
+	<g:SimplePanel styleName="{style.color-style}" ui:field="colorContainer"/>
+	<div class="{style.clearfix}"></div>
+	<g:Button styleName="{style.option-style}" text="Cancel" ui:field="cancelBtn"/>
+	<g:Button styleName="{style.option-style}" text="OK" ui:field="okBtn"/>
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,21 @@
+@FinalFields, false
+com.admin.media.election.client.CommService, false, false, false, false, _, 817213317
+com.admin.media.election.shared.AgentModel, true, true, true, true, com.admin.media.election.shared.AgentModel/2702012627, 2702012627
+com.admin.media.election.shared.CandidateModel, true, true, false, false, com.admin.media.election.shared.CandidateModel/1285207026, 1285207026
+com.admin.media.election.shared.ConstituencyModel, true, true, true, true, com.admin.media.election.shared.ConstituencyModel/2517596514, 2517596514
+com.admin.media.election.shared.InboundModel, true, true, true, true, com.admin.media.election.shared.InboundModel/2868815058, 2868815058
+com.admin.media.election.shared.PartyModel, true, true, false, false, com.admin.media.election.shared.PartyModel/2423807517, 2423807517
+com.admin.media.election.shared.PollModel, true, true, true, true, com.admin.media.election.shared.PollModel/2250190948, 2250190948
+com.admin.media.election.shared.UserModel, true, true, false, false, com.admin.media.election.shared.UserModel/2830572302, 2830572302
+com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException, true, true, true, true, com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException/3936916533, 3936916533
+com.google.gwt.user.client.rpc.RpcTokenException, true, true, false, false, com.google.gwt.user.client.rpc.RpcTokenException/2345075298, 2345075298
+com.google.gwt.user.client.rpc.XsrfToken, false, false, true, true, com.google.gwt.user.client.rpc.XsrfToken/4254043109, 4254043109
+java.lang.Exception, true, false, true, false, java.lang.Exception/1920171873, 1920171873
+java.lang.Integer, true, true, false, false, java.lang.Integer/3438268394, 3438268394
+java.lang.Number, true, false, false, false, java.lang.Number/300033342, 300033342
+java.lang.RuntimeException, true, false, true, false, java.lang.RuntimeException/515124647, 515124647
+java.lang.String, true, true, true, true, java.lang.String/2004016611, 2004016611
+java.lang.Throwable, true, false, true, false, java.lang.Throwable/2953622131, 2953622131
+java.util.ArrayList, true, true, false, false, java.util.ArrayList/4159755760, 4159755760
+java.util.HashMap, true, true, false, false, java.util.HashMap/1797211028, 1797211028
+java.util.LinkedHashMap, true, true, false, false, java.util.LinkedHashMap/3008245022, 3008245022

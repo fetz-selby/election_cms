@@ -1,0 +1,174 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.clearfix{
+			height: 0px;
+			clear: both;		
+		}
+	
+		.main{
+			width: 350px;
+			padding: 10px;
+		}
+		
+		.main .detail-wrapper{
+			height: auto;
+			padding-bottom: 20px;
+		}
+		
+		.main .detail-wrapper .top-label{
+			float: left;
+			font-weight: bold;
+			font-size: 21px;
+			padding-bottom: 40px;
+		}
+		
+		.main .detail-wrapper .desc{
+			float: left;
+			font-size: 14px;
+			color: #444;
+		}
+		
+		.main .detail-wrapper .txt-box{
+			float: left;
+			height: 32px;
+			width: 175px;
+			font-size: 21px;
+			border: 1px solid #D7D7D7;
+			color: dimGray;
+			letter-spacing: 2px;
+		}
+		
+		.main .detail-wrapper .list-box{
+			float: left;
+			height: 32px;
+			width: 175px;
+			font-size: 19px;
+			border: 1px solid #D7D7D7;
+			color: dimGray;
+		}
+		
+		.main .detail-wrapper .search-box{
+			float: left;
+			width: auto;
+			height: 40px;
+		}
+		
+		.main .detail-wrapper .radio-btn{
+			font-size: 14px;
+			margin-right: 15px;
+			color: #828282;
+		}
+
+		.main .detail-wrapper .label{
+			font-size: 14px;
+			color: #828282;
+		}
+
+		.main .detail-wrapper .flowpanel{
+			width: 320px;
+			font-size: 14px;
+			color: #828282;
+		}
+		
+		.main .action-wrapper{
+			float: right;
+			padding: 20px 10px 10px 10px;
+		}
+		
+		.main .action-wrapper .action-link{
+			float: right;
+			padding-top: 2px;
+			margin-right: 10px;
+			font-size: 14px;
+		}
+		
+		.main .action-wrapper .action-btn{
+			float: right;
+			width: 90px;
+			height: 29px;
+			font-size: 14px;
+		}
+		
+		.main .hidden-wrapper{
+			display: none;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<div class="{style.main}">
+		<!-- Label  -->
+			<div class="{style.detail-wrapper}">
+				<div class="{style.top-label}" ui:field="titleLabel">Inbound</div>
+			</div>
+			
+			<div class="{style.clearfix}"></div>
+			
+		<!-- Sender -->
+			<div class="{style.detail-wrapper}">
+				<label class="{style.desc}">Sender</label>
+				<div class="{style.clearfix}"></div>
+				<g:Label styleName="{style.label}" ui:field="senderLabel">Frank</g:Label>
+				<div class="{style.clearfix}"></div>
+			</div>
+			
+		<!-- Mobile -->
+			<div class="{style.detail-wrapper}">
+				<label class="{style.desc}">Mobile</label>
+				<div class="{style.clearfix}"></div>
+				<g:Label styleName="{style.label}" ui:field="mobileLabel">233244200000</g:Label>
+				<div class="{style.clearfix}"></div>
+			</div>
+			
+		<!-- Time -->
+			<div class="{style.detail-wrapper}">
+				<label class="{style.desc}">Time</label>
+				<div class="{style.clearfix}"></div>
+				<g:Label styleName="{style.label}" ui:field="timeLabel">12-07-2016 12:05.45</g:Label>
+				<div class="{style.clearfix}"></div>
+			</div>
+			
+		<!-- Polling Station -->
+			<div class="{style.detail-wrapper}">
+				<label class="{style.desc}">Poll Station</label>
+				<div class="{style.clearfix}"></div>
+				<g:Label styleName="{style.label}" ui:field="pollLabel">Bambi Station</g:Label>
+				<div class="{style.clearfix}"></div>
+			</div>
+			
+		<!-- Constituency -->
+			<div class="{style.detail-wrapper}">
+				<label class="{style.desc}">Constituency</label>
+				<div class="{style.clearfix}"></div>
+				<g:Label styleName="{style.label}" ui:field="consLabel">Ahafo Ano North</g:Label>
+				<div class="{style.clearfix}"></div>
+			</div>
+			
+			<div class="{style.detail-wrapper}">
+				<label class="{style.desc}" ui:field="typeResult">Unknown Result</label>
+				<div class="{style.clearfix}"></div>
+				<g:FlowPanel styleName="{style.flowpanel}" ui:field="resultPanel"></g:FlowPanel>
+				<div class="{style.clearfix}"></div>
+			</div>
+						
+		<!-- Is Declared -->
+			<div class="{style.detail-wrapper}">
+				<label class="{style.desc}">Action</label>
+				<div class="{style.clearfix}"></div>
+				<g:RadioButton styleName="{style.radio-btn}" name="isdeclared" text="Pending" value="true" ui:field="pendingRadio"/>
+				<g:RadioButton styleName="{style.radio-btn}" name="isdeclared" text="Reject" ui:field="rejectRadio"/>
+				<g:RadioButton styleName="{style.radio-btn}" name="isdeclared" text="Approve" ui:field="approveRadio"/>
+			</div>
+			
+		<!-- Action Controls -->
+			<div class="{style.action-wrapper}">
+				<g:Button styleName="{style.action-btn}" text="Save" ui:field="actionBtn"/>
+				<g:Anchor styleName="{style.action-link}" href="javascript:void(0)" text="cancel" ui:field="cancelLink" />
+			</div>
+			
+		<!-- Hidden Fields -->
+			<g:FlowPanel styleName="{style.hidden-wrapper}" ui:field="hiddenPanel"/>
+		</div>
+	
+	</g:HTMLPanel>
+</ui:UiBinder> 

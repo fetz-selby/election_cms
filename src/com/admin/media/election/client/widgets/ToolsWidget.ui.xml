@@ -1,0 +1,28 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.clearfix{height: 0;clear: both;}
+		.main {padding: 10px;line-height: 22px;height: 95px; border: 1px solid #E5E5E5;}
+		.main .loading{float: left;width:600px;height: 45px;margin-right: 10px;}
+		.main .loading .info{font-weight: bold; color: #444; padding: 12px 0px 12px 16px;}
+		.main .loading .progressbar{width: 95%;background: #ccc;height: 20px;margin: 0 auto; display:none;}
+		.main .loading .successinfo{font-weight: bold; padding-left: 15px; color: #00B400; min-height: 20px; display: none;}
+		.main .control{float: right;margin-top: 38px;}
+		.main .control .link{padding: 12px 30px 12px;text-decoration: none;cursor: pointer;background: #0CF; color: #FFF;}
+	</ui:style>
+	<g:HTMLPanel styleName="{style.main}">
+		<div class="{style.loading}">
+			<div class="{style.info}" ui:field="infoLabel"></div>
+			<div class="{style.clearfix}"></div>
+			<div class="{style.progressbar}" ui:field="progress"></div>
+			<div class="{style.clearfix}"></div>
+			<div class="{style.successinfo}" ui:field="successLabel"></div>
+		</div>
+		<div class="{style.control}">
+			<g:Anchor styleName="{style.link}" href="javascript:void(0)" ui:field="updateBtn">
+				update
+			</g:Anchor>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

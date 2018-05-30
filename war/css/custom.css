@@ -1,0 +1,8 @@
+.result-container{float: left; min-width: 80px; margin-top: 15px; margin-right: 20px;}
+.label-style{float: left; padding:5px; margin-right: 5px;}
+.value-style{float: left; background: #000000; color:#FFFFFF; padding:5px;}
+.icon-color-success{color: #3C8E1F;}
+.icon-color-fail{color: #C6000D;}
+.panel-style{padding-bottom: 130px !important;}
+.popup-style{top: 50px !important; border: 1px solid #AAAAAA; background-color: #EAEAEA; }
+.glassPanel{background: #000000; opacity: 0.5;}

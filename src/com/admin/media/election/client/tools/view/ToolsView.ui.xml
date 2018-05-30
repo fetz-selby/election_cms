@@ -1,0 +1,29 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.clearfix{clear: both; height: 0;}
+		.main{padding: 20px; }
+		.main .info{border: 1px solid #E2E2E2; color: #444; text-align: center; min-height: 120px; margin-top: 10px; margin-bottom: 15px; background: #F5F5F5; padding: 10px;}
+		.main .seat-container{width: 760px; margin-bottom: 10px;}
+		.main .nameshortener-container{width: 760px;}
+	</ui:style>
+	<g:HTMLPanel styleName="{style.main}">
+	    <div class="{style.info}">
+	        <p>[Note]</p>
+	        <br />
+	        <p>The provided tools below are auxilliary. The first tool is used for seating seats for paliamentarian results.</p>
+	        <p>It computes the difference in votes aquired by each paliamentarian in a constituency and set the seat based on </p>
+	        <p>the highest score.</p>
+	        <br/>
+	        <p> And the second is for shortening long paliamentarian names. Some paliamentarian names are quite long and thereby </p>
+	        <p>causing the Eleciton application not to render correctly. </p>
+	        <br/>
+	        <p>All these can be done manually, if the tools are not quite efficient for you.</p>
+	    </div>
+	    <div class="{style.clearfix}"></div>
+	    <g:SimplePanel styleName="{style.seat-container}" ui:field="seatContainer"/>
+	    <div class="{style.clearfix}" />
+	    <g:SimplePanel styleName="{style.nameshortener-container}" ui:field="nameContainer" />
+	</g:HTMLPanel>
+</ui:UiBinder> 
